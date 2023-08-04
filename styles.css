@@ -1,0 +1,33 @@
+body {
+    background-color: #000000;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contentContainer {
+    background-color: #1ed760;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#gridContainer {
+    background-color: #1aa64b;
+    height: 100px;
+    width: 100px;
+}
+
+
+
+
+
+/*
+#000000	
+#1aa64b	
+#1db954	
+#33c065	
+#4ac776
