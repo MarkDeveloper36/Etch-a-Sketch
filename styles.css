@@ -7,6 +7,11 @@ body {
     align-items: center;
 }
 
+h1 {
+    text-shadow: 5px 5px #747474;
+    margin: 1rem;
+}
+
 #contentContainer {
     background-color: #1ed760;
     display: flex;
