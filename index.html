@@ -11,20 +11,31 @@
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="imputContainer">
+
+
+    <div id="inputContainer">
         <div class="colorBox">
             <input type="color">
             <span>Color</span>
         </div>
-        <input type="range">
-        <button>Clear</button>
+        <div id="gridControl">
+            <div>
+                <input id="pi_input" type="range" min="0" max="3.14" step="any" />
+                <label id="gridSizeLabel" for="sizeInput">Grid Size</label>
+            </div>
+            <p>Value: <output id="value"></output></p>
+            <button>Clear</button>
+          </div>
     </div>
+
     <div id="contentContainer">
         <h1>Hacker Drawer</h1>
         <div id="gridContainer">
 
         </div>
     </div>
-<script src="./index.js"></script>
+
+
+<script src="./index.js"></script> 
 </body>
 </html>
