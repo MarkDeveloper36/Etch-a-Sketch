@@ -9,12 +9,12 @@ let chosenSize = 16;
 let squareCount = 16;
 
 //set size display to default value
-displaySize.textContent = chosenSize;
+displaySize.textContent = `${chosenSize} \u2715 ${chosenSize}`;
 
 //event listener to get input for gridsize
 inputSize.addEventListener('input', () => {
   chosenSize = inputSize.value;
-  displaySize.textContent = chosenSize;
+  displaySize.textContent = `${chosenSize} \u2715 ${chosenSize}`;
   addOrRemoveSquares(squareCount, chosenSize);
 });
 
