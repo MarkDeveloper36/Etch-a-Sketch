@@ -60,11 +60,13 @@ button {
 }
 
 .square {
-    height: 25%;
-    width: 20%;
-    flex-grow: 1;
     border: 1px solid gray;
     background-color:aliceblue;
+}
+
+.squareG1 {
+    width: 20%;
+    height: 25%;
 }
 
 
