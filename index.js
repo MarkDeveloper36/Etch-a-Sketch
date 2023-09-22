@@ -10,10 +10,11 @@ let newSize = 4;
 window.onload = function() {
   for (let i = 0; i < 16; i++) {
       let square = document.createElement('div');
-      square.classList.add('square', 'squareG1');
+      square.classList.add('square', 'squareG4');
       grid.appendChild(square);
+      square.addEventListener('mouseenter', changeColor);
+      }
   };
-};
 
 displaySize.textContent = `${newSize} \u2715 ${newSize}`;
 
@@ -38,6 +39,7 @@ function addGrid() {
     square.classList.add('square');
     grid.appendChild(square);
     giveSquareRightSize(square);
+    square.addEventListener('mouseenter', changeColor);
   }
 };
 
@@ -57,4 +59,11 @@ function giveSquareRightSize(square) {
   } else if (newSize == 10) {
     square.classList.add('squareG10');
   }
+};
+
+//add color to square when hovered
+
+function changeColor(event) {
+  console.log(event.target);
+  event.target.style.backgroundColor = 'pink';
 }
