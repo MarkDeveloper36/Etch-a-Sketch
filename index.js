@@ -12,7 +12,7 @@ window.onload = function() {
       let square = document.createElement('div');
       square.classList.add('square', 'squareG4');
       grid.appendChild(square);
-      square.addEventListener('mouseenter', changeColor);
+      square.addEventListener('click', changeColor);
       }
   };
 
@@ -62,8 +62,8 @@ function giveSquareRightSize(square) {
 };
 
 //add color to square when hovered
+const colorInput = document.querySelector('#colorInput');
 
 function changeColor(event) {
-  console.log(event.target);
-  event.target.style.backgroundColor = 'pink';
+  event.target.style.backgroundColor = colorInput.value;
 }

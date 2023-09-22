@@ -70,6 +70,20 @@ button {
     margin-top: 1rem;
 }
 
+select {
+    padding: 10px; /* Ruimte binnen de select */
+    border: 1px solid #ccc; /* Randstijl en kleur */
+    border-radius: 5px; /* Afgeronde hoeken */
+    font-size: 16px; /* Tekengrootte */
+  }
+  
+  /* Stijl voor de focus (wanneer het selectveld actief is) */
+  select:focus {
+    outline: none; /* Verwijder de standaard focusstijl */
+    border-color: #33ff00; /* Verander de randkleur wanneer gefocust */
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5); /* Voeg een schaduw toe */
+  }
+
 .square {
     border: 1px solid gray;
     background-color:aliceblue;
