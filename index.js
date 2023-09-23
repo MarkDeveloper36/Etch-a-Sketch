@@ -12,7 +12,7 @@ window.onload = function() {
       let square = document.createElement('div');
       square.classList.add('square', 'squareG4');
       grid.appendChild(square);
-      square.addEventListener('click', changeColor);
+      square.addEventListener('mouseenter', changeColor);
       }
   };
 
@@ -54,8 +54,24 @@ function giveSquareRightSize(square) {
 };
 
 //add color to square when hovered
+let isRainbowActive = false;
+const rainbowButton = document.querySelector('#rainbowButton');
+rainbowButton.addEventListener('click', () => {
+  rainbowButton.classList.toggle('rainbowActive');
+  isRainbowActive == false ? isRainbowActive = true : isRainbowActive = false;
+});
+
 const colorInput = document.querySelector('#colorInput');
 
 function changeColor(event) {
-  event.target.style.backgroundColor = colorInput.value;
+  const rainbowColorArr = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+  if (isRainbowActive == false) {
+    event.target.style.backgroundColor = colorInput.value;
+  } else {
+    event.target.style.backgroundColor = (rainbowColorArr[(getRandomNumber())]);
+  }
 }
+
+function getRandomNumber() {
+  return Math.floor(Math.random() * 7);
+};
