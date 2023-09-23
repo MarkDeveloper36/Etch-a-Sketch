@@ -44,21 +44,13 @@ function addGrid() {
 };
 
 function giveSquareRightSize(square) {
-  if (newSize == 4) {
-    square.classList.add('squareG4');
-  } else if (newSize == 5) {
-    square.classList.add('squareG5');
-  } else if (newSize == 6) {
-    square.classList.add('squareG6');
-  } else if (newSize == 7) {
-    square.classList.add('squareG7');
-  } else if (newSize == 8) {
-    square.classList.add('squareG8');
-  } else if (newSize == 9) {
-    square.classList.add('squareG9');
-  } else if (newSize == 10) {
-    square.classList.add('squareG10');
-  }
+  newSize == 4 ? square.classList.add('squareG4'): null;
+  newSize == 5 ? square.classList.add('squareG5'): null;
+  newSize == 6 ? square.classList.add('squareG6'): null;
+  newSize == 7 ? square.classList.add('squareG7'): null;
+  newSize == 8 ? square.classList.add('squareG8'): null;
+  newSize == 9 ? square.classList.add('squareG9'): null;
+  newSize == 10 ? square.classList.add('squareG10'): null;
 };
 
 //add color to square when hovered
