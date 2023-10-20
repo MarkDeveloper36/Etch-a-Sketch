@@ -79,7 +79,7 @@ h1 {
   border: 2px dotted #33ff00;
 }
 
-.rainbowActive {
+.modeActive {
     border: 2px solid #33ff00;
 }
 
@@ -105,22 +105,21 @@ h1 {
 }
 
 select {
-    padding: 10px; /* Ruimte binnen de select */
-    border: 1px solid #ccc; /* Randstijl en kleur */
-    border-radius: 5px; /* Afgeronde hoeken */
-    font-size: 16px; /* Tekengrootte */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
   }
   
-  /* Stijl voor de focus (wanneer het selectveld actief is) */
   select:focus {
-    outline: none; /* Verwijder de standaard focusstijl */
-    border-color: #33ff00; /* Verander de randkleur wanneer gefocust */
-    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5); /* Voeg een schaduw toe */
+    outline: none;
+    border-color: rgb(51, 255, 0); 
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5); 
   }
 
 .square {
     border: 1px solid gray;
-    background-color:aliceblue;
+    background-color:aliceblue; 
     box-sizing: border-box;
 }
 

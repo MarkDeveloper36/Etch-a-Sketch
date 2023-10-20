@@ -1,11 +1,16 @@
+let isRainbowActive = false;
+
 // grid display
 const grid = document.querySelector('#gridContainer');
 
 // grid controler
 const displaySize = document.querySelector('#displaySize');
 const inputSize = document.querySelector('#inputSize');
+const colorBtn = document.querySelector('#colorBtn');
 
 let newSize = 4;
+displaySize.textContent = `${newSize} \u2715 ${newSize}`;
+
 //print default 16 squares
 window.onload = function() {
   for (let i = 0; i < 16; i++) {
@@ -16,7 +21,10 @@ window.onload = function() {
       }
   };
 
-displaySize.textContent = `${newSize} \u2715 ${newSize}`;
+colorBtn.addEventListener('click', () => {
+  isRainbowActive = !isRainbowActive;
+  colorBtn.classList.toggle('modeActive');
+});
 
 inputSize.addEventListener('change', () => {
   removeGrid();
@@ -54,10 +62,10 @@ function giveSquareRightSize(square) {
 };
 
 //add color to square when hovered
-let isRainbowActive = false;
+
 const rainbowButton = document.querySelector('#rainbowButton');
 rainbowButton.addEventListener('click', () => {
-  rainbowButton.classList.toggle('rainbowActive');
+  rainbowButton.classList.toggle('modeActive');
   isRainbowActive == false ? isRainbowActive = true : isRainbowActive = false;
 });
 
@@ -75,3 +83,10 @@ function changeColor(event) {
 function getRandomNumber() {
   return Math.floor(Math.random() * 7);
 };
+
+//clear
+const btnClear = document.querySelector('#btnClear');
+btnClear.addEventListener('click', () => {
+  removeGrid();
+  addGrid();
+})
